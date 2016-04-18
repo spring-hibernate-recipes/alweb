@@ -1,8 +1,8 @@
 <div class="hspace"></div>
 <div class="hspace"></div>
 <div class="full centered green-bg1 banner white-text">
-	<div class="padded justified">
-		<div class="half">
+	<div class="justified">
+		<div class="padded" style="float: left; width: 440px">
 			<div class="heading2 center-aligned">AryaLinux 2016.04 released.</div>
 			<div class="hspace"></div>
 			<div class="center-aligned small-text">
@@ -14,6 +14,10 @@
 			</div>
 			<a href="downloads.php" class="big-btn dark-gray-bg white-text">Download Now</a>
 		</div>
+		<div class="padded" style="float: left; width: 440px; text-align: center;">
+			<img alt="aryalinux-mate" src="images/1.png">
+		</div>
+		<div style="clear: both"></div>
 	</div>
 </div>
 <div class="hspace"></div>
