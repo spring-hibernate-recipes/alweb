@@ -20,12 +20,15 @@
 		<div class="quarter">
 			<?php include_once 'aboutMenu.php';?>
 		</div>
-		<div class="three-quarters doublem">
-		<?php article(array('heading'=>'About AryaLinux'))?>
-	<?php //article("About AryaLinux", "AryaLinux is a source-based Linux distribution inspired by LFS/BLFS. We use bash scripts for building the entire distribution ground up. As of now, AryaLinux has Mate and XFCE spins as the supported desktop environments but suport for other desktops is in progress.")?>
-	</div>
+		<div class="three-quarters">
+			<h2>Task List Progress</h2>
+			<?php $tasks = roadmap()?>
+			<?php include_once 'templates/roadmap.php';?>
+		</div>
 	</div>
 	<div style="clear: both"></div>
+	<div class="hspace"></div>
+	<div class="hspace"></div>
 	<div class="hspace"></div>
 	<div class="hspace"></div>
 	<div class="hspace"></div>

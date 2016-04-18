@@ -1,12 +1,12 @@
 <?php
 $mainMenu = array (
 		"index.php" => "Home",
-		"downloads.php" => "Downloads",
-		"news.php" => "News",
-		"aboutAryaLinux.php" => "About Aryalinux",
-		"contactUs.php" => "Contact Us",
 		"packages.php" => "Packages",
-		"articles.php" => "Articles" 
+		"documentation.php" => "Documentation",
+		"downloads.php" => "Downloads",
+		"aboutAryaLinux.php" => "About Aryalinux",
+		"news.php" => "News",
+		"contactUs.php" => "Contact Us" 
 )?>
 <div class="green-bg">
 	<div class="main-menu centered full">

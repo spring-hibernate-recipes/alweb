@@ -104,7 +104,7 @@ body {
 }
 
 .padded {
-	padding: 20px;
+	padding: 30px;
 }
 
 .justified {
@@ -132,4 +132,30 @@ body {
 .current {
 	background-color: #ff6600;
 	color: #fff;
+}
+
+div.release-div {
+	text-align: center;
+}
+
+a.orange {
+	background-color: #ff6600;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	padding: 10px 20px;
+}
+
+a.blue {
+	background-color: blue;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	padding: 10px 20px;
+}
+
+.doublem {
+	line-height: 2em;
 }

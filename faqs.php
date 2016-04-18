@@ -15,18 +15,12 @@
 	<?php $currentPage="aboutAryaLinux.php"?>
 	<?php include_once 'menu.php';?>
 	<?php include_once 'banner.php';?>
-	<?php include 'functions.php';?>
+	<?php include_once 'functions.php';?>
 	<div class="full centered">
 		<div class="quarter">
-			<ul>
-				<li><a href="aboutAryaLinux.php">About AryaLinux</a></li>
-				<li><a href="history.php">A bit of History</a></li>
-				<li><a href="faqs.php">FAQs</a></li>
-				<li><a href="roadmap.php">Roadmap</a></li>
-				<li><a href="#">Packages</a></li>
-			</ul>
+			<?php include_once 'aboutMenu.php';?>
 		</div>
-		<div class="three-quarters">
+		<div class="three-quarters doublem">
 			<h3>Frequently asked questions</h3>
 			<a name="top"></a>
 			<ul>
@@ -210,9 +204,6 @@
 		</div>
 	</div>
 	<div style="clear: both"></div>
-	<div class="hspace"></div>
-	<div class="hspace"></div>
-	<div class="hspace"></div>
 	<div class="hspace"></div>
 	<div class="hspace"></div>
 	<div class="hspace"></div>

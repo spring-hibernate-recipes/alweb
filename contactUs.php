@@ -15,7 +15,7 @@
 	<?php $currentPage="contactUs.php"?>
 	<?php include_once 'menu.php';?>
 	<?php include_once 'banner.php';?>
-	<?php include 'functions.php';?>
+	<?php include_once 'functions.php';?>
 	<div class="full centered">
 		<div class="three-quarters">
 			<form method="post">
@@ -30,13 +30,10 @@
 			</p>
 		</div>
 		<div class="quarter">
-			Download Links...
+			<?php include_once 'downloadSidePanel.php';?>
 		</div>
 	</div>
 	<div style="clear: both"></div>
-	<div class="hspace"></div>
-	<div class="hspace"></div>
-	<div class="hspace"></div>
 	<div class="hspace"></div>
 	<div class="hspace"></div>
 	<div class="hspace"></div>

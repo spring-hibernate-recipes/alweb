@@ -15,17 +15,11 @@
 	<?php $currentPage="news.php"?>
 	<?php include_once 'menu.php';?>
 	<?php include_once 'banner.php';?>
-	<?php include 'functions.php';?>
-	<div class="full centered">
-		<div class="three-quarters">
-	<?php newsHeading("Pre-Release notes - AryaLinux 2016.04", NULL, "14th April, 2016")?>
-	<?php newsHeading("Gearing up for AryaLinux 2016.04", NULL, "14th April, 2016")?>
-	</div>
+	<?php include_once 'functions.php';?>
+	<div class="full centered doublem">
+	<?php latestNewsHeadings()?>
 	</div>
 	<div style="clear: both"></div>
-	<div class="hspace"></div>
-	<div class="hspace"></div>
-	<div class="hspace"></div>
 	<div class="hspace"></div>
 	<div class="hspace"></div>
 	<div class="hspace"></div>
