@@ -1,4 +1,5 @@
 <?php
+session_start ();
 include_once 'globalvars.php';
 function connect() {
 	$mysqli = mysqli_connect ( "localhost", "root", "password@123", "aryadynamic" );
@@ -14,6 +15,12 @@ function query($query) {
 	}
 	mysqli_close ( $link );
 	return $data;
+}
+function update($query) {
+	$link = connect ();
+	$result = mysqli_query ( $link, $query );
+	mysqli_close ( $link );
+	return $result;
 }
 function findArticle($params) {
 	if (isset ( $params ['heading'] )) {
@@ -63,7 +70,7 @@ function packageCategories() {
 	return query ( $query );
 }
 function packagesByCategory($id) {
-	$query = "select id, name from packages where isPackage=1";
+	$query = "select id, name from packages where isPackage=1 and categoryId='$id'";
 	return query ( $query );
 }
 function packageCategoryById($id) {

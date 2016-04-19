@@ -24,8 +24,9 @@ create table articles
 create table primaryDownloads
 (
 	id int primary key auto_increment,
+	label varchar(64) not null,
 	releaseId int not null,
-	downloadLink varchar(32) not null,
+	downloadLink varchar(256) not null,
 	releaseNotes text not null,
 	downloadButtonClass varchar(16) not null,
 	isActive int not null
@@ -37,6 +38,7 @@ create table releases
 	name varchar(32) not null,
 	createdDate datetime not null,
 	summary text not null,
+	codename varchar(64) not null,
 	isActive int not null
 );
 
@@ -52,12 +54,12 @@ create table allDownloads
 create table packages
 (
 	id int primary key auto_increment,
-	packageId int not null,
+	categoryId int not null,
 	name varchar(64) not null,
 	isPackage int not null,
 	isInstallable int not null,
 	notes text,
-	isBinary int not null,
+	isBinary int,
 	requiredDependencies varchar(1024),
 	recommendedDependencies varchar(1024),
 	optionalDependencies varchar(1024),
