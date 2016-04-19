@@ -18,7 +18,7 @@ insert into articles (heading, summary, body, author, createdOn, type, category)
 <li>Of late I realized a lot of things, of course the hard way which could have been taken care of in the previous versions of AryaLinux but errors simply happened because, the whole Linux landscape is so dynamic and changes so fast that its diffiult to keep up. Things like being able to be boot on most machines(if not all), error free builds, correctness and validity of instructions in the articles etc could have been much better and improved. Well, the good part is, have solved a lot of such issues and you could see that in the next release which would be out within the next few weeks.</li>
 <li>Arya does not have a fixed release cycle which I think is not a good thing at all so, in order to take care of that soon would be putting a road map in the website and would strictly adhere to the same.</li>
 <li>I would also be sharing stuff that I am currently working on so that beta testing and bug fixes can be done swiflty and this would be done on a regular basis.</li>
-<li>I guess that&#39;s that and, well, watch out for the next release! Have fun building!!<li>
+I guess that&#39;s that and, well, watch out for the next release! Have fun building!!
 </ul>', 'Chandrakant', now(), 2, '');
 
 insert into articles (heading, summary, body, author, createdOn, type, category) values ('About AryaLinux', NULL, 'AryaLinux is a source-based Linux distribution inspired by LFS/BLFS. We use bash scripts for building the entire distribution ground up. As of now, AryaLinux has Mate and XFCE spins as the supported desktop environments but suport for other desktops is in progress.', 'Chandrakant', now(), 1, '');
@@ -29,3 +29,75 @@ insert into articles (heading, summary, body, author, createdOn, type, category)
 insert into roadmap (status, tentativeDate, task) values ('0', '2016-04-30', 'Release 2016.04 build-tools and builder DVDs');
 insert into roadmap (status, tentativeDate, task) values ('0', '2016-04-30', 'Release 2016.04 Mate and XFCE base live systems');
 insert into roadmap (status, tentativeDate, task) values ('0', '2016-05-30', 'Release 2016.04 Gnome and KDE base live systems');
+
+insert into packages (name, isPackage, isInstallable) values ('Base System (LFS Packages)', 0, 1);
+insert into packages (name, isPackage, isInstallable) values ('Networking tools and applications', 0, 1);
+insert into packages (name, isPackage, isInstallable) values ('Desktop Environments', 0, 1);
+insert into packages (name, isPackage, isInstallable) values ('Multimedia Applications and Libraries', 0, 1);
+insert into packages (name, isPackage, isInstallable) values ('System Utilities and libraries', 0, 1);
+insert into packages (name, isPackage, isInstallable) values ('Miscellaneous', 0, 1);
+insert into packages (name, isPackage, isInstallable) values ('Others', 0, 1);
+
+insert into packages (name, isPackage, isInstallable, packageId) values ('linux-headers', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('man-pages', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('glibc', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('adjusting', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('zlib', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('file', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('binutils', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('gmp', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('mpfr', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('mpc', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('gcc', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('bzip2', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('pkg-config', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('ncurses', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('attr', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('acl', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('libcap', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('sed', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('shadow', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('psmisc', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('iana-etc', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('m4', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('bison', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('flex', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('grep', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('readline', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('bash', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('bc', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('libtool', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('gdbm', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('gperf', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('expat', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('inetutils', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('perl', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('xml-parser', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('intltool', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('autoconf', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('automake', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('xz', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('kmod', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('gettext', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('systemd', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('procps-ng', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('e2fsprogs', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('coreutils', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('diffutils', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('gawk', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('findutils', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('groff', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('grub', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('less', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('gzip', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('iproute2', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('kbd', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('libpipeline', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('make', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('patch', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('dbus', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('util-linux', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('man-db', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('tar', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('texinfo', '1', '0', '1');
+insert into packages (name, isPackage, isInstallable, packageId) values ('vim', '1', '0', '1');

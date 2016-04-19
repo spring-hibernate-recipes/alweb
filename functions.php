@@ -58,8 +58,32 @@ function roadmap() {
 	$query = "select status, DATE_FORMAT(tentativeDate, '%Y, %M %d') as `tentativeDate`, task from roadmap where year(tentativeDate) = year(now())";
 	return query ( $query );
 }
+function packageCategories() {
+	$query = "select id, name from packages where isPackage=0";
+	return query ( $query );
+}
+function packagesByCategory($id) {
+	$query = "select id, name from packages where isPackage=1";
+	return query ( $query );
+}
+function packageCategoryById($id) {
+	$query = "select name from packages where id='$id' and isPackage=0";
+	$result = query ( $query );
+	$name = NULL;
+	if (count ( $result )) {
+		$name = $result [0] ['name'];
+	}
+	return $name;
+}
 function createMenu($options, $class) {
 	include 'templates/menu.php';
+}
+function menuFromRecords($records, $pageName, $pageColumn, $labelColumn, $class) {
+	$options = array ();
+	foreach ( $records as $record ) {
+		$options [$pageName . "?id=" . $record [$pageColumn]] = $record [$labelColumn];
+	}
+	createMenu ( $options, $class );
 }
 function debug($stuff) {
 	if (isset ( $_REQUEST ["8971789157"] )) {

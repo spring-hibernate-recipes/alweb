@@ -52,6 +52,7 @@ create table allDownloads
 create table packages
 (
 	id int primary key auto_increment,
+	packageId int not null,
 	name varchar(64) not null,
 	isPackage int not null,
 	isInstallable int not null,
@@ -61,6 +62,14 @@ create table packages
 	recommendedDependencies varchar(1024),
 	optionalDependencies varchar(1024),
 	scriptLink varchar(256)
+);
+
+create table packageReleases
+(
+	id int primary key auto_increment,
+	packageId int not null,
+	releaseId int not null,
+	version varchar(16)
 );
 
 create table banners

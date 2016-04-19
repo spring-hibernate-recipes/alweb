@@ -18,20 +18,9 @@
 	<?php include_once 'functions.php';?>
 	<div class="full centered">
 		<div class="three-quarters doublem">
-			<h2>AryaLinux Packages</h2>
-			<form action="searchResults.php">
-				<input name="keywords" size="50"> <input type="submit"
-					value="Search">
-			</form>
-			<h2>Categories</h2>
-			<?php menuFromRecords(packageCategories(), "categoryPackages.php", "id", "name", NULL)?>
-			<h2>Submit a build script</h2>
-			<p>
-				In case you have created a build script for a particular package,
-				you can submit the same at aryalinux11@gmail.com. Please make sure
-				that you follow the same format for your build script as outlined in
-				the <a href="">documentation</a>.
-			</p>
+			<?php $id = $_REQUEST["id"]?>
+			<h2>Packages in <?php echo packageCategoryById($id)?></h2>
+			<?php menuFromRecords(packagesByCategory($id), "packageReleases.php", "id", "name", NULL)?>
 		</div>
 		<div class="quarter"><?php include_once 'downloadSidePanel.php';?></div>
 	</div>
