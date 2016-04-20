@@ -21,12 +21,6 @@
 			<?php include_once 'documentationCategories.php';?>
 		</div>
 		<div class="three-quarters">
-			<h2>AryaLinux Documentation</h2>
-			<form action="searchResults.php">
-				<input type="text" name="search" size="40"> <input type="submit"
-					value="Search">
-			</form>
-			<div class="hspace"></div>
 			<?php $id = $_REQUEST['id']?>
 			<?php $query = "select * from articles where type=4 and id='$id'"?>
 			<?php $article = query($query)[0];?>

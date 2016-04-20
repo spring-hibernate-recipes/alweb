@@ -1,6 +1,8 @@
-insert into articles (heading, summary, body, author, createdOn, type, category) values ('Welcome to AryaLinux', null, 'AryaLinux is a GNU/Linux based operating system that is built by building source code of the various components packages that it comprises of. In more geeky terms its a source based Linux Distribution. Its fast, comprehensive and provides pre-installed applications that are pretty much enough for the day to day user. AryaLinux also provides the flexibility to build your own Linux distribution by providing the necessary tools to do so.', 'Chandrakant', now(), 1, '');
+insert into users values('chandrakant', 'password@123', 'Chandrakant');
 
-insert into articles (heading, summary, body, author, createdOn, type, category) values ('AryaLinux 2016.04 Pre Release Notes', 'Release 2016.04 is round the corner. Here is a quick list of things that one can expect from release 2016.04', 'Release 2016.04 is round the corner. Here is a quick list of things that one can expect from release 2016.04:<ul>
+insert into articles (heading, summary, body, author, createdOn, type, category, isActive) values ('Welcome to AryaLinux', null, 'AryaLinux is a GNU/Linux based operating system that is built by building source code of the various components packages that it comprises of. In more geeky terms its a source based Linux Distribution. Its fast, comprehensive and provides pre-installed applications that are pretty much enough for the day to day user. AryaLinux also provides the flexibility to build your own Linux distribution by providing the necessary tools to do so.', 'Chandrakant', now(), 1, '', '1');
+
+insert into articles (heading, summary, body, author, createdOn, type, category, isActive) values ('AryaLinux 2016.04 Pre Release Notes', 'Release 2016.04 is round the corner. Here is a quick list of things that one can expect from release 2016.04', 'Release 2016.04 is round the corner. Here is a quick list of things that one can expect from release 2016.04:<ul>
 <li>Based on LFS systemd and BLFS systemd development versions.</li>
 <li>Arya in all DEs listed in BLFS and also Mate. Mate actually is undergoing some serious work of late so need to catch up with that.</li>
 <li>I have created a lot of extra scripts that would be tested and eventually uploaded for download. As of now the LFS, X-Server and Mate Scripts are pretty stable. Would share them soon.</li>
@@ -11,19 +13,18 @@ insert into articles (heading, summary, body, author, createdOn, type, category)
 <li>LFS part builds a little faster in multi core systems and by incorporation of ccache building other stuff becomes a little faster as well (llvm, kernel etc.)</li>
 <li>Initramfs support. This sould have been like there, no questions asked. My bad. Took some time, but initramfs support, yes of course.</li>
 <li>Package version would by and large be the same as in the LFS and BLFS books.</li>
-</ul>', 'Chandrakant', now(), 2, '');
+</ul>', 'Chandrakant', now(), 2, '', '1');
 
-insert into articles (heading, summary, body, author, createdOn, type, category) values ('Getting ready for version 2016.04', 'Its been 4 months since the last release (2015). There has been a lot of updates both on the LFS and BLFS front and on our front as well. The next release - 2016.04 would be out by the end of April 2016. Excited about this release because a lot of thinking has gone into this release and lot changes can be expected.', 'Thank you all for your support!<p>Its been quiet a while and LFS and BLFS have both moved ahead. There had been very few updates because most of the work that was happening kept me so involved that I was finding little time to make updates. With this release, in fact a whole lot of new things, refinements and process streamlining is going to happen. But before I give a preview of the same, here&#39;s something that has happened of late:</p><ul>
-<li>We got listed in distrowatch. Visit <a href="distrowatch.com/arya">distrowatch.com/arya</a> for more details. I know our distrowatch profile looks pretty deserted as of now, but things would surely improve with time.</li>
+insert into articles (heading, summary, body, author, createdOn, type, category, isActive) values ('Getting ready for version 2016.04', 'Its been 4 months since the last release (2015). There has been a lot of updates both on the LFS and BLFS front and on our front as well. The next release - 2016.04 would be out by the end of April 2016. Excited about this release because a lot of thinking has gone into this release and lot changes can be expected.', 'Thank you all for your support!<p>Its been quiet a while and LFS and BLFS have both moved ahead. There had been very few updates because most of the work that was happening kept me so involved that I was finding little time to make updates. With this release, in fact a whole lot of new things, refinements and process streamlining is going to happen. But before I give a preview of the same, here&#39;s something that has happened of late:</p><ul>
+<li>We got listed in distrowatch. Visit <a href="http://distrowatch.com/arya">distrowatch.com/arya</a> for more details. I know our distrowatch profile looks pretty deserted as of now, but things would surely improve with time.</li>
 <li>Of late I realized a lot of things, of course the hard way which could have been taken care of in the previous versions of AryaLinux but errors simply happened because, the whole Linux landscape is so dynamic and changes so fast that its diffiult to keep up. Things like being able to be boot on most machines(if not all), error free builds, correctness and validity of instructions in the articles etc could have been much better and improved. Well, the good part is, have solved a lot of such issues and you could see that in the next release which would be out within the next few weeks.</li>
 <li>Arya does not have a fixed release cycle which I think is not a good thing at all so, in order to take care of that soon would be putting a road map in the website and would strictly adhere to the same.</li>
 <li>I would also be sharing stuff that I am currently working on so that beta testing and bug fixes can be done swiflty and this would be done on a regular basis.</li>
-I guess that&#39;s that and, well, watch out for the next release! Have fun building!!
-</ul>', 'Chandrakant', now(), 2, '');
+</ul>I guess that&#39;s that and, well, watch out for the next release! Have fun building!!', 'Chandrakant', now(), 2, '', '1');
 
-insert into articles (heading, summary, body, author, createdOn, type, category) values ('About AryaLinux', NULL, 'AryaLinux is a source-based Linux distribution inspired by LFS/BLFS. We use bash scripts for building the entire distribution ground up. As of now, AryaLinux has Mate and XFCE spins as the supported desktop environments but suport for other desktops is in progress.', 'Chandrakant', now(), 1, '');
+insert into articles (heading, summary, body, author, createdOn, type, category, isActive) values ('About AryaLinux', NULL, 'AryaLinux is a source-based Linux distribution inspired by LFS/BLFS. We use bash scripts for building the entire distribution ground up. As of now, AryaLinux has Mate and XFCE spins as the supported desktop environments but suport for other desktops is in progress.', 'Chandrakant', now(), 1, '', 1);
 
-insert into articles (heading, summary, body, author, createdOn, type, category) values ('A bit of history', NULL, 'AryaLinux started off as a research project in the year 2007 when I was still learning how to use Linux. It took almost close to three weeks for me to come up with a working LFS system on a pretty slow AMD processor based system. BLFS with a functional XFCE took another couple of months and all of this while I was spending sleepless nights copying and pasting instructions from the LFS/BLFS books. Of course ALFS used to exist but even ALFS seemed like a difficult proposition to me to set up and run. Ever since then I was wishing to build what is &quot;aryalinux build scripts&quot; as of now.<br><br>The scripts that I built over the subsequent years were not nearly ready to be released and so I kept working on them till they&#39;d mature enough. A few years back only after reuniting with Rakesh Khandelwal(Creator and Maintainer of <a href=\"prathamos.org\">Pratham OS</a>), a very old and dear friend of the good old school days that I shared my idea of building a distro around scripts, inspired by LFS. He encouraged me to build and release the scripts that I had worked on over the years but there was another challange. LFS sort of helps you build a usable GNU/Linux Desktop but you would still need to build/install a lot of things on your own outside the LFS/BLFS ecospace to end up with a really working OS worthy of running alongside or even replacing any existing system for that matter. Painstkingly, we worked through a lot of minor details - Hardware Driver Issues, Circular Package Dependencies, Package Management System etc and here we are.', 'Chandrakant', now(), 1, '');
+insert into articles (heading, summary, body, author, createdOn, type, category, isActive) values ('A bit of history', NULL, 'AryaLinux started off as a research project in the year 2007 when I was still learning how to use Linux. It took almost close to three weeks for me to come up with a working LFS system on a pretty slow AMD processor based system. BLFS with a functional XFCE took another couple of months and all of this while I was spending sleepless nights copying and pasting instructions from the LFS/BLFS books. Of course ALFS used to exist but even ALFS seemed like a difficult proposition to me to set up and run. Ever since then I was wishing to build what is &quot;aryalinux build scripts&quot; as of now.<br><br>The scripts that I built over the subsequent years were not nearly ready to be released and so I kept working on them till they&#39;d mature enough. A few years back only after reuniting with Rakesh Khandelwal(Creator and Maintainer of <a href=\"prathamos.org\">Pratham OS</a>), a very old and dear friend of the good old school days that I shared my idea of building a distro around scripts, inspired by LFS. He encouraged me to build and release the scripts that I had worked on over the years but there was another challange. LFS sort of helps you build a usable GNU/Linux Desktop but you would still need to build/install a lot of things on your own outside the LFS/BLFS ecospace to end up with a really working OS worthy of running alongside or even replacing any existing system for that matter. Painstkingly, we worked through a lot of minor details - Hardware Driver Issues, Circular Package Dependencies, Package Management System etc and here we are.', 'Chandrakant', now(), 1, '', 1);
 
 
 insert into roadmap (status, tentativeDate, task) values ('0', '2016-04-30', 'Release 2016.04 build-tools and builder DVDs');
@@ -101,3 +102,389 @@ insert into packages (name, isPackage, isInstallable, categoryId) values ('man-d
 insert into packages (name, isPackage, isInstallable, categoryId) values ('tar', '1', '0', '1');
 insert into packages (name, isPackage, isInstallable, categoryId) values ('texinfo', '1', '0', '1');
 insert into packages (name, isPackage, isInstallable, categoryId) values ('vim', '1', '0', '1');
+
+insert into releases (name, createdDate, summary, codeName, isActive) values ('AryaLinux 2016.04', now(), 'This release primarily focusses on building a stable set of scripts that can be used to build AryaLinux, plus a stable build that can run across multiple hardware.', 'Dawn of justice', '1');
+insert into primaryDownloads(label, releaseId, downloadLink, releaseNotes, downloadButtonClass, isActive) values ('AryaLinux 2016.04 Mate', '1', '#', 'Some sample release notes', 'orange', '1');
+insert into primaryDownloads(label, releaseId, downloadLink, releaseNotes, downloadButtonClass, isActive) values ('AryaLinux 2016.04 XFCE', '1', '#', 'Some sample release notes', 'blue', '1');
+
+insert into articles (heading, summary, body, author, createdOn, type, category, isActive) values ('AryaLinux - Build process in details (Using your existing Linux System)', 'This article outlines the process of building AryaLinux inside an existing Linux System. If you have downloaded the AryaLinux Builder Disk and want to build AryaLinux using the builder disk please refer to this article.', '<h3>Before we get started</h3>
+<p>
+Before we get started please make sure that we have an empty partition in which we can build AryaLinux. In case you are a Windows User, then please refer to this article on how to create a partition. In case you are a Linux user you can use fdisk (if you have an MBR partition table in your Hard Disk) or parted (if you have a GPT partition table in your hard disk). Nonetheless its assumed that before you are performing step 1 you actually have an empty partition.
+</p>
+<p>
+<b>NB:</b> Formatting a partition might result in loss of data. Please create an empty partition at your own risk.
+</p>
+<h3>Step 1. Building the toolchain</h3>
+<p>
+The process of building AryaLinux starts by creating the toolchain. The toolchain is a set of software comprising of the compiler(gcc), C libraries(glibc) and few utitlity software that we would be utilizing to build our new system. Although you can use the host-provided versions of these tools but to make sure that the new system that we are creating does not inherit anything from our host system, we need to build the toolchain.
+</p>
+<p>
+To carry out the first step you need to be the root user. So carry out the following commands:
+<pre>
+sudo su
+</pre>
+Enter your password when prompted to continue. Then enter
+<pre>
+cd /root
+wget http://www.aryalinux.org/build-scripts/latest-scripts.tar.gz
+wget http://www.aryalinux.org/build-scripts/latest-sources.tar.gz
+tar xf latest-scripts.tar.gz
+tar xf latest-sources.tar.gz
+cd scripts
+./1.sh
+</pre> 
+Once you enter ./1.sh, the build scripts are launched. The first build script(1.sh) would ask you some general information which you need to answer before proceeding. These are the questions that would be prompted for:
+<pre>
+Enter device name <span class="userinput">/dev/sda</span>
+Enter the root partition <span class="userinput">/dev/sda2</span>
+Enter the swap partition <span class="userinput">/dev/sda3</span>
+Enter the home partition <span class="userinput">/dev/sda4</span>
+Enter the hostname <span class="userinput">aryalinux</span>
+Enter the domain name <span class="userinput">aryalinux.org</span>
+Enter OS Name <span class="userinput">AryaLinux</span>
+Enter OS Codename <span class="userinput">dawnofjustice</span>
+Enter OS Version <span class="userinput">2016.04</span>
+Enter locale <span class="userinput">en_IN.utf8</span>
+Enter paper size <span class="userinput">A4</span>
+</pre>
+</p>
+<p>
+In the next screen you would be prompted to select your timezone:
+<pre>
+Please identify a location so that time zone rules can be set correctly.
+Please select a continent, ocean, "coord", or "TZ".
+ 1) Africa
+ 2) Americas
+ 3) Antarctica
+ 4) Arctic Ocean
+ 5) Asia
+ 6) Atlantic Ocean
+ 7) Australia
+ 8) Europe
+ 9) Indian Ocean
+10) Pacific Ocean
+11) coord - I want to use geographical coordinates.
+12) TZ - I want to specify the time zone using the Posix TZ format.
+#? 5
+</pre>
+Since I want to choose India, I choose 5 - Asia as the continent. In the next screen, you would be asked to choose the country:
+<pre>
+Please select a country whose clocks agree with yours.
+ 1) Afghanistan		  18) Israel		    35) Palestine
+ 2) Armenia		  19) Japan		    36) Philippines
+ 3) Azerbaijan		  20) Jordan		    37) Qatar
+ 4) Bahrain		  21) Kazakhstan	    38) Russia
+ 5) Bangladesh		  22) Korea (North)	    39) Saudi Arabia
+ 6) Bhutan		  23) Korea (South)	    40) Singapore
+ 7) Brunei		  24) Kuwait		    41) Sri Lanka
+ 8) Cambodia		  25) Kyrgyzstan	    42) Syria
+ 9) China		  26) Laos		    43) Taiwan
+10) Cyprus		  27) Lebanon		    44) Tajikistan
+11) East Timor		  28) Macau		    45) Thailand
+12) Georgia		  29) Malaysia		    46) Turkmenistan
+13) Hong Kong		  30) Mongolia		    47) United Arab Emirates
+14) India		  31) Myanmar (Burma)	    48) Uzbekistan
+15) Indonesia		  32) Nepal		    49) Vietnam
+16) Iran		  33) Oman		    50) Yemen
+17) Iraq		  34) Pakistan
+#? 14
+</pre>
+The code for India is 14, so I enter 14 here. Now comes the confirmation. Just enter 1 here.
+<pre>
+The following information has been given:
+
+	India
+
+Therefore TZ=&#39;Asia/Kolkata&#39; will be used.
+Local time is now:	Sat Apr 16 08:44:15 IST 2016.
+Universal Time is now:	Sat Apr 16 03:14:15 UTC 2016.
+Is the above information OK?
+1) Yes
+2) No
+#? 1
+</pre>
+That&#39;s it. Once you are done, the target partition would be formatted and source code copied and a new user - lfs would be created. Once done, you would be logged in as the lfs user and the following prompt shown:
+<pre>
+Entering lfs user. Please execute 2.sh
+dircolors: no SHELL environment variable, and no shell type option given
+lfs@chandrakant-HP-15-Notebook-PC ~ $ 
+</pre>
+This is where you have to start the script to build the toolchain by entering:
+<pre>
+./2.sh
+</pre>
+Once this is done, we can proceed to build the rest of the system. The following message is shown when the script ends:
+<pre>
+Done with building the toolchain.
+Enter exit to continue...
+lfs@chandrakant-HP-15-Notebook-PC ~ $ 
+</pre>
+Just enter exit to continue the rest of the process
+<pre>
+exit
+</pre>
+This would change the ownership of the toolchain, create some essential files and directories in the target partition, mount kernel filesystems in the target at appropriate locations and prompt you to continue with the rest of the process:
+<pre>
+Would chroot into the toolchain.
+In the prompt, enter resume to start building the final-system.
+</pre>
+Now you have to enter resume to continue:
+<pre>
+resume
+</pre>
+Once this is over, you would be asked to run the next script - 3.sh
+<pre>
+Please execute 3.sh
+</pre>
+Respond by entering:
+<pre>
+./3.sh
+</pre>
+This would build the final system and when done, you would have to enter exit twice to continue further. The first exit would get you out of the subprocess we started after resume and the second exit would exit the chroot jail
+<pre>
+exit
+exit
+</pre>
+We are done with most of the system however the biggest piece of the puzzle is still left - The kernel. So we need to run the next script - 4.sh to build the kernel. This involves entering the following 2 little commands:
+<pre>
+cd /sources
+./4.sh
+</pre>
+Once the kernel is built and installed you would be asked to enter the root password. This is the system administrator&#39;s password. Then you would be asked your Full name and username and password for your user. Once everything is entered, the scripts would go further and install few more components that are required to run alps like python, wget, sudo etc. This would take a little while. Once everything is done, you can enter exit to exit from the script.
+<pre>
+exit
+</pre>
+By this time, the bootloader would be installed and the boot list updated. There is a small bug in the os-prober script that prevents the detection of mounted partitions. So when you reboot you might not see the entry for your OS. Do not worry. Just boot into aryalinux and recreate the grub.cfg file to see the complete OS list again. So after logging into you freshly built system, enter
+<pre>
+grub-mkconfig -o /boot/grub/grub.cfg
+</pre>
+</p>', 'chandrakant', now(), '4', 'Installation/Building', 1);
+insert into articles (heading, summary, body, author, createdOn, type, category, isActive) values ('AryaLinux - Build process in details (Using the builder disk)', 'This article outlines the process of building AryaLinux inside from the AryaLinux Builder Disk. If you want to build AryaLinux from inside your present Linux 
+distribution, please refer to this article.', '<h3>Before getting started</h3>
+<p>
+Before getting started please create a partition in your system that would of at least 10GB size. In case you are a Windoze user, you may do so by using the Disk 
+Management tool and if you are a Linux user, you can use either parted or fdisk. As of now the following partition table types have been tested and found working:
+<ul>
+	<li>MBR partition table</li>
+	<li>GPT partition table</li>
+</ul>
+</p>
+<h3>Step 1: Preparing the Builder Disk</h3>
+<p>
+Download the builder disk iso from this link. Burn the ISO to a DVD or write it onto a pen-drive. To write the ISO onto a pen drive, in case you are running Windoze, 
+you can use the Unetbootin tool and if you are running Linux, you can use the command given below. <b>Please change /dev/sdb to the appropriate device corresponding to 
+your pen drive.</b>
+<pre>
+dd if=aryalinux-2016.04-builder.iso of=/dev/sdb
+</pre>
+Restart the system and boot from the DVD/Pen drive that you just prepared.
+</p>
+<h3>Step 2. Building the toolchain</h3>
+<p>
+The process of building AryaLinux starts by creating the toolchain. The toolchain is a set of software comprising of the compiler(gcc), C libraries(glibc) and few 
+utitlity software that we would be utilizing to build our new system. Although you can use the host-provided versions of these tools but to make sure that the new 
+system that we are creating does not inherit anything from our host system, we need to build the toolchain.
+</p>
+<p>
+To carry out the first step you need to be the root user. So carry out the following commands:
+<pre>
+cd scripts
+./1.sh
+</pre> 
+Once you enter ./1.sh, the build scripts are launched. The first build script(1.sh) would ask you some general information which you need to answer before proceeding. 
+These are the questions that would be prompted for:
+<pre>
+Enter device name <span class="userinput">/dev/sda</span>
+Enter the root partition <span class="userinput">/dev/sda2</span>
+Enter the swap partition <span class="userinput">/dev/sda3</span>
+Enter the home partition <span class="userinput">/dev/sda4</span>
+Enter the hostname <span class="userinput">aryalinux</span>
+Enter the domain name <span class="userinput">aryalinux.org</span>
+Enter OS Name <span class="userinput">AryaLinux</span>
+Enter OS Codename <span class="userinput">dawnofjustice</span>
+Enter OS Version <span class="userinput">2016.04</span>
+Enter locale <span class="userinput">en_IN.utf8</span>
+Enter paper size <span class="userinput">A4</span>
+</pre>
+</p>
+<p>
+In the next screen you would be prompted to select your timezone:
+<pre>
+Please identify a location so that time zone rules can be set correctly.
+Please select a continent, ocean, "coord", or "TZ".
+ 1) Africa
+ 2) Americas
+ 3) Antarctica
+ 4) Arctic Ocean
+ 5) Asia
+ 6) Atlantic Ocean
+ 7) Australia
+ 8) Europe
+ 9) Indian Ocean
+10) Pacific Ocean
+11) coord - I want to use geographical coordinates.
+12) TZ - I want to specify the time zone using the Posix TZ format.
+#? 5
+</pre>
+Since I want to choose India, I choose 5 - Asia as the continent. In the next screen, you would be asked to choose the country:
+<pre>
+Please select a country whose clocks agree with yours.
+ 1) Afghanistan		  18) Israel		    35) Palestine
+ 2) Armenia		  19) Japan		    36) Philippines
+ 3) Azerbaijan		  20) Jordan		    37) Qatar
+ 4) Bahrain		  21) Kazakhstan	    38) Russia
+ 5) Bangladesh		  22) Korea (North)	    39) Saudi Arabia
+ 6) Bhutan		  23) Korea (South)	    40) Singapore
+ 7) Brunei		  24) Kuwait		    41) Sri Lanka
+ 8) Cambodia		  25) Kyrgyzstan	    42) Syria
+ 9) China		  26) Laos		    43) Taiwan
+10) Cyprus		  27) Lebanon		    44) Tajikistan
+11) East Timor		  28) Macau		    45) Thailand
+12) Georgia		  29) Malaysia		    46) Turkmenistan
+13) Hong Kong		  30) Mongolia		    47) United Arab Emirates
+14) India		  31) Myanmar (Burma)	    48) Uzbekistan
+15) Indonesia		  32) Nepal		    49) Vietnam
+16) Iran		  33) Oman		    50) Yemen
+17) Iraq		  34) Pakistan
+#? 14
+</pre>
+The code for India is 14, so I enter 14 here. Now comes the confirmation. Just enter 1 here.
+<pre>
+The following information has been given:
+
+	India
+
+Therefore TZ=&#39;Asia/Kolkata&#39; will be used.
+Local time is now:	Sat Apr 16 08:44:15 IST 2016.
+Universal Time is now:	Sat Apr 16 03:14:15 UTC 2016.
+Is the above information OK?
+1) Yes
+2) No
+#? 1
+</pre>
+That&#39;s it. Once you are done, the target partition would be formatted and source code copied and a new user - lfs would be created. Once done, you would be logged in 
+as the lfs user and the following prompt shown:
+<pre>
+Entering lfs user. Please execute 2.sh
+dircolors: no SHELL environment variable, and no shell type option given
+lfs@chandrakant-HP-15-Notebook-PC ~ $ 
+</pre>
+This is where you have to start the script to build the toolchain by entering:
+<pre>
+./2.sh
+</pre>
+Once this is done, we can proceed to build the rest of the system. The following message is shown when the script ends:
+<pre>
+Done with building the toolchain.
+Enter exit to continue...
+lfs@chandrakant-HP-15-Notebook-PC ~ $ 
+</pre>
+Just enter exit to continue the rest of the process
+<pre>
+exit
+</pre>
+This would change the ownership of the toolchain, create some essential files and directories in the target partition, mount kernel filesystems in the target at 
+appropriate locations and prompt you to continue with the rest of the process:
+<pre>
+Would chroot into the toolchain.
+In the prompt, enter resume to start building the final-system.
+</pre>
+Now you have to enter resume to continue:
+<pre>
+resume
+</pre>
+Once this is over, you would be asked to run the next script - 3.sh
+<pre>
+Please execute 3.sh
+</pre>
+Respond by entering:
+<pre>
+./3.sh
+</pre>
+This would build the final system and when done, you would have to enter exit twice to continue further. The first exit would get you out of the subprocess we started 
+after resume and the second exit would exit the chroot jail
+<pre>
+exit
+exit
+</pre>
+We are done with most of the system however the biggest piece of the puzzle is still left - The kernel. So we need to run the next script - 4.sh to build the kernel. 
+This involves entering the following 2 little commands:
+<pre>
+cd /sources
+./4.sh
+</pre>
+Once the kernel is built and installed you would be asked to enter the root password. This is the system administrator&#39;s password. Then you would be asked your Full 
+name and username and password for your user. Once everything is entered, the scripts would go further and install few more components that are required to run alps 
+like python, wget, sudo etc. This would take a little while. Once everything is done, you can enter exit to exit from the script.
+<pre>
+exit
+</pre>
+By this time, the bootloader would be installed and the boot list updated. There is a small bug in the os-prober script that prevents the detection of mounted 
+partitions. So when you reboot you might not see the entry for your OS. Do not worry. Just boot into aryalinux and recreate the grub.cfg file to see the complete OS 
+list again. So after logging into you freshly built system, enter
+<pre>
+grub-mkconfig -o /boot/grub/grub.cfg
+</pre>
+</p>', 'chandrakant', now(), '4', 'Installation/Building', 1);
+
+insert into articles (heading, summary, body, author, createdOn, type, category, isActive) values ('Building the XFCE desktop environment', 'This article outlines the process of building the XFCE desktop environment on top of the base system created using the first stage of scripts.', '<h3>Chrooting into the base system</h3>
+<p>
+It is assumed that if you are going to follow the steps outlined here, you must already have build a system already and you could have booted into it. The system built 
+using the first stage of scripts is a CLI based system. In case you want to create a server-like system, you may not want to install a Desktop Enviornment on it. But 
+if you are a desktop/laptop user and you want to use AryaLinux as your desktop for activities like playing music, browsing and watching videos etc, then you might want 
+to put a GUI skin right on top of the system we just built. This article outlines the process of build-installing the xorg-server and XFCE desktop environment which 
+would provide GUI capabilities to the GNU/Linux system we just created.
+</p>
+<p>
+First of all we need to chroot into the system we have created so that we can build stuff from inside it. So boot using your Live Builder Disk or boot into the system 
+using which you created the base system and execute the following commands:
+<pre>
+sudo su
+cd /root
+cd scripts
+</pre>
+<b>N.B. Its assumed here that you have not deleted the build scripts that you had downloaded earlier(In case you are not using the builder disk)</b>
+Now choot into the system by entering:
+<pre>
+./enteral.sh
+</pre>
+You would be asked to provide the partition name for the base system. Provide the partition name like /dev/sda3 or /dev/sda5. This would put you inside the chrooted 
+environment. Now you need to log in as the user that was built towards the end of the previous stage. I created a user called aryalinux so I would be executing the 
+following command(Replace aryalinux with your username):
+<pre>
+su - aryalinux
+</pre>
+You should notice the prompt turning green. In case it does, well, we are good to go.
+</p>
+<h3>Installing some basic packages</h3>
+<p>
+One of the objectives of AryaLinux right from the beginning was to provide a way to carry out build-install process in a very simple manner similar to the way apt-get 
+and rpm works. Thus we ended up building alps(AryaLinux Packaging System). More about alps here. Alps got installed while we we building the base-system. Now lets use 
+alps to install some basic packages:
+<pre>
+alps install profile nano openssl which wget cacerts python2 python3 ntfs-3g fuse lvm2 parted gptfdisk shadow sudo usbutils pciutils openssh
+</pre>
+</p>
+<h3>Building the X-Server</h3>
+<p>
+Build the X-Server using the following alps command:
+<pre>
+alps install xserver-meta xorg-drivers-meta libva-drivers
+sudo rm /etc/X11/xorg.conf.d/*
+</pre>
+</p>
+<h3>Building XFCE</h3>
+<p>
+Build XFCE by executing the following commands:
+<pre>
+alps install xfce-desktop-meta xfce-apps-meta network-manager-applet ModemManager blueman-applet lightdm lightdm-gtk-greeter
+</pre>
+This would create the basic XFCE desktop and few apps like xfce-terminal, mousepad etc. Bluetooth and Internet support would also be built in this process. Once done 
+you can now reboot and continue the rest of your installation in the newly created system. You do not need either the present Linux System or Live Disk any more.
+</p>
+<h3>Issues and Troubleshooting</h3>
+<p>If you are not able to boot into lightdm - the graphical login screen, then probably the graphics driver for your system were not built into the kernel or the 
+driver was not built with X-Server. You need to install those drivers first and then you would be able to log into the Graphical Desktop.</p>
+<p>Touchpad tap might not be enabled when you boot for the first time. Read this article to know how to enable touchpad tap for click.</p>
+<p>While the build process was going on, you enountered an error. In such a case just re-run the previous command and you should be good this time. In case it still 
+fails, please drop a mail to us at aryalinux11@gmail.com and we would take a look into it.</p>', 'chandrakant', now(), '4', 'Desktop Environments', 1);

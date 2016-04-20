@@ -159,13 +159,20 @@ a.blue {
 .doublem {
 	line-height: 2em;
 }
+
 pre {
 	display: block;
 	padding: 10px;
 	background-color: #000;
 	color: #00ff00;
 	font-size: 1.2em;
+	white-space: pre-wrap; /* CSS 3 */
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
+
 .userinput {
 	color: #ff6600;
 	font-weight: bold;

@@ -1,0 +1,53 @@
+Building the XFCE desktop environment
+
+This article outlines the process of building the XFCE desktop environment on top of the base system created using the first stage of scripts.
+
+<h3>Chrooting into the base system</h3>
+<p>
+It is assumed that if you are going to follow the steps outlined here, you must already have build a system already and you could have booted into it. The system built using the first stage of scripts is a CLI based system. In case you want to create a server-like system, you may not want to install a Desktop Enviornment on it. But if you are a desktop/laptop user and you want to use AryaLinux as your desktop for activities like playing music, browsing and watching videos etc, then you might want to put a GUI skin right on top of the system we just built. This article outlines the process of build-installing the xorg-server and XFCE desktop environment which would provide GUI capabilities to the GNU/Linux system we just created.
+</p>
+<p>
+First of all we need to chroot into the system we have created so that we can build stuff from inside it. So boot using your Live Builder Disk or boot into the system using which you created the base system and execute the following commands:
+<pre>
+sudo su
+cd /root
+cd scripts
+</pre>
+<b>N.B. Its assumed here that you have not deleted the build scripts that you had downloaded earlier(In case you are not using the builder disk)</b>
+Now choot into the system by entering:
+<pre>
+./enteral.sh
+</pre>
+You would be asked to provide the partition name for the base system. Provide the partition name like /dev/sda3 or /dev/sda5. This would put you inside the chrooted environment. Now you need to log in as the user that was built towards the end of the previous stage. I created a user called aryalinux so I would be executing the following command(Replace aryalinux with your username):
+<pre>
+su - aryalinux
+</pre>
+You should notice the prompt turning green. In case it does, well, we are good to go.
+</p>
+<h3>Installing some basic packages</h3>
+<p>
+One of the objectives of AryaLinux right from the beginning was to provide a way to carry out build-install process in a very simple manner similar to the way apt-get and rpm works. Thus we ended up building alps(AryaLinux Packaging System). More about alps here. Alps got installed while we we building the base-system. Now lets use alps to install some basic packages:
+<pre>
+alps install profile nano openssl which wget cacerts python2 python3 ntfs-3g fuse lvm2 parted gptfdisk shadow sudo usbutils pciutils openssh
+</pre>
+</p>
+<h3>Building the X-Server</h3>
+<p>
+Build the X-Server using the following alps command:
+<pre>
+alps install xserver-meta xorg-drivers-meta libva-drivers
+sudo rm /etc/X11/xorg.conf.d/*
+</pre>
+</p>
+<h3>Building XFCE</h3>
+<p>
+Build XFCE by executing the following commands:
+<pre>
+alps install xfce-desktop-meta xfce-apps-meta network-manager-applet ModemManager blueman-applet lightdm lightdm-gtk-greeter
+</pre>
+This would create the basic XFCE desktop and few apps like xfce-terminal, mousepad etc. Bluetooth and Internet support would also be built in this process. Once done you can now reboot and continue the rest of your installation in the newly created system. You do not need either the present Linux System or Live Disk any more.
+</p>
+<h3>Issues and Troubleshooting</h3>
+<p>If you are not able to boot into lightdm - the graphical login screen, then probably the graphics driver for your system were not built into the kernel or the driver was not built with X-Server. You need to install those drivers first and then you would be able to log into the Graphical Desktop.</p>
+<p>Touchpad tap might not be enabled when you boot for the first time. Read this article to know how to enable touchpad tap for click.</p>
+<p>While the build process was going on, you enountered an error. In such a case just re-run the previous command and you should be good this time. In case it still fails, please drop a mail to us at aryalinux11@gmail.com and we would take a look into it.</p>

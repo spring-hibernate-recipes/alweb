@@ -1,27 +1,22 @@
-AryaLinux - Build process in details (Using your existing Linux System)
+AryaLinux - Build process in details (Using the builder disk)
 
-This article outlines the process of building AryaLinux inside an existing Linux System. If you have downloaded the AryaLinux Builder Disk and want to build AryaLinux using the builder disk please refer to this article.
+This article outlines the process of building AryaLinux inside from the AryaLinux Builder Disk. If you want to build AryaLinux from inside your present Linux distribution, please refer to this article.
 
-<h3>Before we get started</h3>
+<h3>Before getting started</h3>
 <p>
-Before we get started please make sure that we have an empty partition in which we can build AryaLinux. In case you are a Windows User, then please refer to this article on how to create a partition. In case you are a Linux user you can use fdisk (if you have an MBR partition table in your Hard Disk) or parted (if you have a GPT partition table in your hard disk). Nonetheless its assumed that before you are performing step 1 you actually have an empty partition.
+Before getting started please create a partition in your system that would of at least 10GB size. In case you are a Windoze user, you may do so by using the Disk Management tool and if you are a Linux user, you can use either parted or fdisk. As of now the following partition table types have been tested and found working:
+<ul>
+	<li>MBR partition table</li>
+	<li>GPT partition table</li>
+</ul>
 </p>
+<h3>Step 1: Preparing the Builder Disk</h3>
 <p>
-<b>NB:</b> Formatting a partition might result in loss of data. Please create an empty partition at your own risk.
-</p>
-<h3>Step 1. Downloading the build-tools and sources</h3>
-<p>
+Download the builder disk iso from this link. Burn the ISO to a DVD or write it onto a pen-drive. To write the ISO onto a pen drive, in case you are running Windoze, you can use the Unetbootin tool and if you are running Linux, you can use the command given below. <b>Please change /dev/sdb to the appropriate device corresponding to your pen drive.</b>
 <pre>
-sudo su
+dd if=aryalinux-2016.04-builder.iso of=/dev/sdb
 </pre>
-Enter your password when prompted to continue. Then enter
-<pre>
-cd /root
-wget http://www.aryalinux.org/build-scripts/latest-scripts.tar.gz
-wget http://www.aryalinux.org/build-scripts/latest-sources.tar.gz
-tar xf latest-scripts.tar.gz
-tar xf latest-sources.tar.gz
-</pre>
+Restart the system and boot from the DVD/Pen drive that you just prepared.
 </p>
 <h3>Step 2. Building the toolchain</h3>
 <p>
@@ -95,7 +90,7 @@ The following information has been given:
 
 	India
 
-Therefore TZ='Asia/Kolkata' will be used.
+Therefore TZ=&#39;Asia/Kolkata&#39; will be used.
 Local time is now:	Sat Apr 16 08:44:15 IST 2016.
 Universal Time is now:	Sat Apr 16 03:14:15 UTC 2016.
 Is the above information OK?
@@ -103,7 +98,7 @@ Is the above information OK?
 2) No
 #? 1
 </pre>
-That's it. Once you are done, the target partition would be formatted and source code copied and a new user - lfs would be created. Once done, you would be logged in as the lfs user and the following prompt shown:
+That&#39;s it. Once you are done, the target partition would be formatted and source code copied and a new user - lfs would be created. Once done, you would be logged in as the lfs user and the following prompt shown:
 <pre>
 Entering lfs user. Please execute 2.sh
 dircolors: no SHELL environment variable, and no shell type option given
@@ -150,7 +145,7 @@ We are done with most of the system however the biggest piece of the puzzle is s
 cd /sources
 ./4.sh
 </pre>
-Once the kernel is built and installed you would be asked to enter the root password. This is the system administrator's password. Then you would be asked your Full name and username and password for your user. Once everything is entered, the scripts would go further and install few more components that are required to run alps like python, wget, sudo etc. This would take a little while. Once everything is done, you can enter exit to exit from the script.
+Once the kernel is built and installed you would be asked to enter the root password. This is the system administrator&#39;s password. Then you would be asked your Full name and username and password for your user. Once everything is entered, the scripts would go further and install few more components that are required to run alps like python, wget, sudo etc. This would take a little while. Once everything is done, you can enter exit to exit from the script.
 <pre>
 exit
 </pre>

@@ -21,15 +21,9 @@
 			<?php include_once 'documentationCategories.php';?>
 		</div>
 		<div class="three-quarters">
-			<h2>Search Documentation</h2>
-			<form action="searchResults.php">
-				<input type="text" name="search" size="40"> <input type="submit"
-					value="Search">
-			</form>
-			<div class="hspace"></div>
-			<div class="hspace"></div>
-			<h2>Recent Articles</h2>
-			<?php $query = 'select id, summary, heading from articles where type=4 order by id desc limit 5'?>
+			<?php $id = $_REQUEST['id']?>
+			<h2>Articles on <?php echo $id?></h2>
+			<?php $query = "select id, summary, heading from articles where type=4 and category='$id'"?>
 			<?php $articles = query($query);?>
 			<?php foreach ($articles as $article) { ?>
 			<h3><?php echo $article['heading']?></h3>

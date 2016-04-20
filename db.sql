@@ -18,7 +18,8 @@ create table articles
 	author varchar(32) not null,
 	createdOn datetime,
 	type int not null,
-	category varchar(128)
+	category varchar(128),
+	isActive int not null
 );
 
 create table primaryDownloads
