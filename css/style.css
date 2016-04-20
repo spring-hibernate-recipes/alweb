@@ -159,3 +159,14 @@ a.blue {
 .doublem {
 	line-height: 2em;
 }
+pre {
+	display: block;
+	padding: 10px;
+	background-color: #000;
+	color: #00ff00;
+	font-size: 1.2em;
+}
+.userinput {
+	color: #ff6600;
+	font-weight: bold;
+}

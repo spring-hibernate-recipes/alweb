@@ -27,15 +27,14 @@
 					value="Search">
 			</form>
 			<div class="hspace"></div>
-			<?php $query = 'select id, summary, heading from articles where type=4 order by id desc limit 5'?>
-			<?php $articles = query($query);?>
-			<?php foreach ($articles as $article) { ?>
+			<?php $id = $_REQUEST['id']?>
+			<?php $query = "select * from articles where type=4 and id='$id'"?>
+			<?php $article = query($query)[0];?>
 			<h3><?php echo $article['heading']?></h3>
-			<p class="justified"><?php echo $article['summary']?></p>
-			<p style="text-align: right;">
-				<a href="readDoc.php?id=<?php echo $article['id']?>">Read More</a>
+			<i class="justified"><?php echo $article['summary']?></i>
+			<p class="justified">
+				<?php echo $article['body']?>
 			</p>
-			<?php }?>
 		</div>
 	</div>
 	<div style="clear: both"></div>
